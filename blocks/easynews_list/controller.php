@@ -58,10 +58,10 @@
 
 			switch($row['orderBy']) {
 				case 'public_desc':
-					$pl->sortBy('cDatePublic', 'desc');
+					$pl->sortBy('cvDatePublic', 'desc');
 				break;
 				case 'public_asc':
-					$pl->sortBy('cDatePublic', 'asc');
+					$pl->sortBy('cvDatePublic', 'asc');
 				break;				
 				case 'display_asc':
 					$pl->sortByDisplayOrder();
