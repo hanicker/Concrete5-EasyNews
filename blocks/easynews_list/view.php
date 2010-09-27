@@ -26,6 +26,7 @@
 			echo $textHelper->shorten($cobj->getCollectionDescription(),$controller->truncateChars);
 		}
 		?>
+        <?php $cobj->getCollectionDatePublic();?>
 	</div>
 	
 <?php   } 
