@@ -154,7 +154,8 @@ class DashboardEasyNewsController extends EasyNewsDashboardController {
 	private function saveData($p) {
 		$blocks = $p->getBlocks('Main');
 		foreach($blocks as $b) {
-			$b->deleteBlock();
+			if($b->getBlockTypeHandle()=='content')
+				$b->deleteBlock();
 		}
 
 		$bt = BlockType::getByHandle('content');
