@@ -119,6 +119,10 @@
 			if ( intval($row['cParentID']) != 0) {
 				$pl->filterByParentID($cParentID);
 			}
+			
+			//Publish Date Filter
+			$dt=Loader::helper('date');
+			$pl->filter('cvDatePublic',$dt->getLocalDateTime(),'<');
 
 			if ($num > 0) {
 				$pages = $pl->getPage();

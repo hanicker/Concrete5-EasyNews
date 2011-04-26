@@ -160,8 +160,8 @@ class DashboardEasyNewsController extends EasyNewsDashboardController {
 
 		$bt = BlockType::getByHandle('content');
 		$data = array('content' => $this->post('newsBody'));
-		$p->addBlock($bt, 'Main', $data);
-		
+		$b=$p->addBlock($bt, 'Main', $data);
+		//$b->setBlockDisplayOrder(1); //TODO: think about putting it on top
 		Loader::model("attribute/categories/collection");
 	}
 
